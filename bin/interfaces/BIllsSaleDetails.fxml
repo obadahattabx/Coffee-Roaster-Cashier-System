@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="918.0" prefWidth="1650.0" stylesheets="@../../stylesheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlers.Product_Details">
+   <children>
+      <TableView id="#ipad" fx:id="table_bills" editable="true" layoutX="11.0" layoutY="193.0" prefHeight="571.0" prefWidth="1632.0">
+         <columns>
+            <TableColumn fx:id="Tfinalsale" prefWidth="238.0" style="-fx-alignment: center;" text="الاجمالي" />
+            <TableColumn fx:id="Tdiscount" prefWidth="173.0" style="-fx-alignment: center;" text="خصم %" />
+            <TableColumn fx:id="Tsale" prefWidth="167.0" style="-fx-alignment: center;" text="المبلغ" />
+            <TableColumn fx:id="Ttype" prefWidth="196.0" style="-fx-alignment: center;" text="نوع الكمية" />
+            <TableColumn fx:id="Tqunt" prefWidth="139.0" style="-fx-alignment: center;" text="كمية" />
+            <TableColumn fx:id="Tsaleprice" prefWidth="112.0" style="-fx-alignment: center;" text="سعر البيع" />
+            <TableColumn fx:id="Tname" minWidth="0.0" prefWidth="284.0" style="-fx-alignment: center;" text="اسم الصنف" />
+            <TableColumn fx:id="Tbarcode" minWidth="0.0" prefWidth="259.0" style="-fx-alignment: center;" text="باركود" />
+            <TableColumn fx:id="Tnum" minWidth="0.0" prefWidth="61.0" style="-fx-alignment: center;" text="رقم" />
+         </columns>
+      </TableView>
+      <Button id="line" layoutX="1421.0" layoutY="797.0" mnemonicParsing="false" onAction="#onEditDetails" prefHeight="56.0" prefWidth="215.0" stylesheets="@stylesheet.css" text="تعديل">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button id="line" layoutX="1191.0" layoutY="797.0" mnemonicParsing="false" onAction="#Delete" prefHeight="56.0" prefWidth="215.0" stylesheets="@stylesheet.css" text="حذف">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="1482.0" layoutY="27.0" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #6E6E6E;" text="رقم الفاتورة" textFill="#eeecec" />
+      <Label alignment="CENTER" layoutX="1482.0" layoutY="88.0" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #6E6E6E;" text="وصف الفاتورة" textFill="#eeecec" />
+      <Label alignment="CENTER" layoutX="1482.0" layoutY="147.0" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #6E6E6E;" text="مدخل الفاتورة" textFill="#eeecec" />
+      <TextField fx:id="text_num" alignment="CENTER" disable="true" layoutX="1249.0" layoutY="27.0" prefHeight="38.0" prefWidth="233.0" />
+      <TextField fx:id="text_desc" alignment="CENTER" disable="true" layoutX="1249.0" layoutY="88.0" prefHeight="38.0" prefWidth="233.0" />
+      <TextField fx:id="text_user" alignment="CENTER" disable="true" layoutX="1249.0" layoutY="147.0" prefHeight="38.0" prefWidth="233.0" />
+      <Label alignment="CENTER" layoutX="1060.0" layoutY="27.0" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #6E6E6E;" text="اسم  شركة الزبون" textFill="#eeecec" />
+      <Label alignment="CENTER" layoutX="1060.0" layoutY="88.0" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #6E6E6E;" text="وقت" textFill="#eeecec" />
+      <TextField fx:id="text_company" alignment="CENTER" disable="true" layoutX="827.0" layoutY="27.0" prefHeight="38.0" prefWidth="233.0" />
+      <TextField fx:id="text_time" alignment="CENTER" disable="true" layoutX="827.0" layoutY="88.0" prefHeight="38.0" prefWidth="233.0" />
+      <Label alignment="CENTER" layoutX="1060.0" layoutY="147.0" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #6E6E6E;" text="تاريخ " textFill="#eeecec" />
+      <TextField fx:id="text_date" alignment="CENTER" disable="true" layoutX="827.0" layoutY="147.0" prefHeight="38.0" prefWidth="233.0" />
+      <TextField fx:id="bfinalsale" alignment="CENTER" disable="true" layoutX="11.0" layoutY="764.0" prefHeight="65.0" prefWidth="239.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" layoutX="250.0" layoutY="764.0" prefHeight="65.0" prefWidth="173.0" style="-fx-background-color: #6E6E6E;" text="الاجمالي الفاتورة" textFill="#eeecec">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

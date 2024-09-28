@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="918.0" prefWidth="1650.0" style="-fx-background-color: #23272A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlers.Billpurprice">
+   <children>
+      <AnchorPane id="redline" layoutY="1.0" prefHeight="307.0" prefWidth="370.0" stylesheets="@stylesheet.css">
+         <children>
+            <RadioButton fx:id="rwithoutsup" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="244.0" layoutY="30.0" mnemonicParsing="false" onAction="#onwithoutsup" selected="true" text="بدون مورد" textFill="#fcf5f5">
+               <toggleGroup>
+                  <ToggleGroup fx:id="sup" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="raddsup" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="244.0" layoutY="61.0" mnemonicParsing="false" onAction="#onaddsup" text="اضافة مورد" textFill="#fcf5f5" toggleGroup="$sup" />
+            <Label alignment="CENTER" layoutX="244.0" layoutY="93.0" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #6E6E6E;" text="اسم المورد" textFill="#f8f6f6" />
+            <Label alignment="CENTER" layoutX="244.0" layoutY="154.0" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #6E6E6E;" text="الهاتف" textFill="#ebe9e9" />
+            <Label alignment="CENTER" layoutX="244.0" layoutY="237.0" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #6E6E6E;" text="الشركة" textFill="#eeeeee" />
+            <TextField fx:id="sname" alignment="CENTER_RIGHT" disable="true" layoutX="6.0" layoutY="93.0" prefHeight="40.0" prefWidth="238.0" />
+            <TextField fx:id="sphone" alignment="CENTER_RIGHT" disable="true" layoutX="6.0" layoutY="151.0" prefHeight="40.0" prefWidth="238.0" />
+            <TextField fx:id="scompany" alignment="CENTER_RIGHT" disable="true" layoutX="6.0" layoutY="237.0" prefHeight="40.0" prefWidth="238.0" />
+            <Label alignment="CENTER" layoutX="109.0" layoutY="-1.0" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #822E46;" text="بيانات المورد" textFill="#f5f3f3" />
+            <Button id="sale" layoutX="39.0" layoutY="38.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="141.0" stylesheets="@stylesheet.css" text="قائمة الموردين" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="redline" layoutX="1272.0" layoutY="1.0" prefHeight="307.0" prefWidth="370.0" stylesheets="@stylesheet.css">
+         <children>
+            <Label alignment="CENTER" layoutX="243.0" layoutY="54.0" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #6E6E6E;" text="رقم الفاتورة" textFill="#f5f3f3" />
+            <TextField fx:id="numberbill" alignment="CENTER_RIGHT" layoutX="125.0" layoutY="54.0" prefHeight="40.0" prefWidth="120.0">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+            <Label alignment="CENTER" layoutX="243.0" layoutY="103.0" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #6E6E6E;" text="التاريخ" textFill="#f5f3f3" />
+            <Label alignment="CENTER" layoutX="243.0" layoutY="154.0" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #6E6E6E;" text="مستخدم برنامج" textFill="#f5f3f3" />
+            <Label alignment="CENTER" layoutX="243.0" layoutY="215.0" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #6E6E6E;" text="وصف فاتورة" textFill="#f5f3f3" />
+            <TextField fx:id="userprog" alignment="CENTER" disable="true" layoutX="8.0" layoutY="154.0" prefHeight="40.0" prefWidth="235.0">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+            <TextArea fx:id="descBill" layoutX="8.0" layoutY="213.0" prefHeight="85.0" prefWidth="235.0">
+               <font>
+                  <Font size="18.0" />
+               </font></TextArea>
+            <Label alignment="CENTER" layoutX="118.0" layoutY="-1.0" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #822E46;" text="بيانات الفاتورة" textFill="#f5f3f3" />
+            <TextField fx:id="datebill" alignment="CENTER" disable="true" layoutX="8.0" layoutY="103.0" prefHeight="40.0" prefWidth="235.0">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+         </children>
+      </AnchorPane>
+      <HBox alignment="TOP_RIGHT" layoutX="234.0" layoutY="318.0" prefHeight="64.0" prefWidth="1408.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="76.0" prefWidth="286.0" style="-fx-background-color: #6E6E6E;" text="الاجمالي" textFill="#f5f4f4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="40.0" prefWidth="36.0" />
+            <MenuButton fx:id="mbuttype" alignment="CENTER" mnemonicParsing="false" prefHeight="65.0" prefWidth="225.0" stylesheets="@../../stylesheet.css" text="نوع كمية ">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#Weight" text="وزن" />
+                <MenuItem mnemonicParsing="false" onAction="#item" text="حبة" />
+              </items>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </MenuButton>
+            <Label prefHeight="40.0" prefWidth="36.0" />
+            <Label alignment="CENTER" prefHeight="76.0" prefWidth="286.0" style="-fx-background-color: #6E6E6E;" text="سعر شراء" textFill="#f5f4f4">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label prefHeight="40.0" prefWidth="36.0" />
+            <Label prefHeight="40.0" prefWidth="36.0" />
+            <Label alignment="CENTER" prefHeight="70.0" prefWidth="430.0" style="-fx-background-color: #6E6E6E;" text="اسم صنف" textFill="#f5f4f4">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_RIGHT" layoutX="234.0" layoutY="379.0" prefHeight="64.0" prefWidth="1408.0">
+         <children>
+            <TextField fx:id="text_finalpur" alignment="CENTER" prefHeight="64.0" prefWidth="287.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label prefHeight="40.0" prefWidth="35.0" />
+            <TextField fx:id="text_type" alignment="CENTER" prefHeight="64.0" prefWidth="226.0">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+            <Label prefHeight="40.0" prefWidth="36.0" />
+            <TextField fx:id="text_purprice" alignment="CENTER" prefHeight="67.0" prefWidth="286.0">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+            <Label prefHeight="40.0" prefWidth="36.0" />
+            <Label prefHeight="40.0" prefWidth="36.0" />
+            <TextField fx:id="text_name" alignment="CENTER" prefHeight="64.0" prefWidth="430.0">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+         </children>
+      </HBox>
+      <TableView fx:id="table_bill" layoutX="5.0" layoutY="494.0" prefHeight="313.0" prefWidth="1635.0">
+        <columns>
+            <TableColumn fx:id="bfinalpur" prefWidth="236.0" style="-fx-alignment: center; -fx-front-size: 18;" text="الاجمالي" />
+          <TableColumn fx:id="btype" prefWidth="404.0" style="-fx-alignment: center; -fx-front-size: 18;" text="نوع كمية" />
+            <TableColumn fx:id="bqunt" prefWidth="275.0" style="-fx-alignment: center; -fx-front-size: 18;" text="كمية" />
+          <TableColumn fx:id="bpurprice" prefWidth="274.0" style="-fx-alignment: center; -fx-front-size: 18;" text="سعر شراء" />
+            <TableColumn fx:id="bname" prefWidth="387.0" style="-fx-alignment: center; -fx-front-size: 18;" text="اسم صنف" />
+            <TableColumn fx:id="bnum" prefWidth="62.0" style="-fx-alignment: center; -fx-front-size: 18;" text="رقم" />
+        </columns>
+      </TableView>
+      <Button id="blue" layoutX="1442.0" layoutY="815.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="186.0" stylesheets="@stylesheet.css" text="جديد" />
+      <Button id="blue" layoutX="1170.0" layoutY="815.0" mnemonicParsing="false" onAction="#saveBill" prefHeight="49.0" prefWidth="225.0" stylesheets="@stylesheet.css" text="حفظ الفاتورة" />
+      <RadioButton fx:id="rnotadd" layoutX="8.0" layoutY="372.0" mnemonicParsing="false" text="غير مضاف" textFill="#f5f0f0">
+         <toggleGroup>
+            <ToggleGroup fx:id="add" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radd" layoutX="131.0" layoutY="372.0" mnemonicParsing="false" selected="true" text="مضاف مسبقا" textFill="#fffdfd" toggleGroup="$add" />
+      <Button id="line" layoutX="5.0" layoutY="411.0" mnemonicParsing="false" onAction="#addBillfortable" prefHeight="64.0" prefWidth="235.0" stylesheets="@stylesheet.css" text="اضافة" />
+      <RadioButton fx:id="kgQunt" layoutX="748.0" layoutY="443.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="67.0" selected="true" text="كغم" textFill="#f8f1f1" visible="false">
+         <toggleGroup>
+            <ToggleGroup fx:id="type" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="Gqunt" layoutX="594.0" layoutY="443.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="67.0" text="غرام" textFill="#eeeaea" toggleGroup="$type" visible="false" />
+      <TextField fx:id="SumFinalpur" alignment="CENTER" layoutX="5.0" layoutY="807.0" prefHeight="76.0" prefWidth="235.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" layoutX="240.0" layoutY="807.0" prefHeight="76.0" prefWidth="286.0" style="-fx-background-color: #6E6E6E;" text="إجمالي الفاتورة" textFill="#f5f4f4">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="618.0" layoutY="1.0" prefHeight="85.0" prefWidth="390.0" style="-fx-background-color: #822E46;" text="فاتورة الشراء" textFill="#eeebeb">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
