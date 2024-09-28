@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlers.Edtit_DetailsP">
+   <children>
+      <VBox layoutX="574.0" layoutY="49.0" prefHeight="325.0" prefWidth="100.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="95.0" text="اسم صنف" />
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="95.0" text="سعر الشراء" />
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="95.0" text="كمية" />
+         </children>
+      </VBox>
+      <TextField fx:id="name" alignment="CENTER" layoutX="387.0" layoutY="65.0" />
+      <TextField fx:id="purprice" alignment="CENTER" layoutX="387.0" layoutY="125.0" />
+      <TextField fx:id="qunt" alignment="CENTER" layoutX="387.0" layoutY="181.0" />
+      <TextField fx:id="type" alignment="CENTER" disable="true" layoutX="104.0" layoutY="66.0" />
+      <TextField fx:id="finalsale" alignment="CENTER" disable="true" layoutX="104.0" layoutY="126.0" />
+      <Button fx:id="save" layoutX="256.0" layoutY="264.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="177.0" text="حفظ" />
+      <Label alignment="CENTER" layoutX="291.0" layoutY="51.0" prefHeight="60.0" prefWidth="95.0" text="نوع كمية" />
+      <Label alignment="CENTER" layoutX="291.0" layoutY="111.0" prefHeight="60.0" prefWidth="95.0" text="الاجمالي" />
+      <RadioButton fx:id="KGrum" layoutX="238.0" layoutY="28.0" mnemonicParsing="false" text="كغم" />
+      <RadioButton fx:id="Grum" layoutX="171.0" layoutY="28.0" mnemonicParsing="false" text="غرام" />
+      <RadioButton fx:id="items" layoutX="104.0" layoutY="28.0" mnemonicParsing="false" text="حبة" />
+   </children>
+</AnchorPane>

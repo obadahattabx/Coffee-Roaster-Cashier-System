@@ -1,0 +1,25 @@
+.parent{
+	-fx-background-color:#23272A;
+	
+
+	
+}
+.username{
+	-fx-background-color: #2C3135;
+	-fx-background-radius: 0px;
+	-fx-background-fills: #ADADAD;
+	-fx-text-fill: #FFFFFF;
+}
+
+.password{
+	-fx-background-color: #2C3135;
+	-fx-background-radius: 0px;
+	-fx-background-fills: #ADADAD;
+	-fx-text-fill: #FFFFFF;
+}
+.login_in{
+	-fx-background-color: #702860	
+}
+.iconuser{
+	-fx-background-color: #35363A
+}

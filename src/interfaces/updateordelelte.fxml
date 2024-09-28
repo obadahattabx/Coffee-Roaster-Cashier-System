@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="1003.0" prefWidth="1657.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlers.Home_updateordelete">
+   <children>
+      <TextField fx:id="SearcBox" alignment="CENTER_RIGHT" layoutX="450.0" layoutY="74.0" onKeyTyped="#onSearch" prefHeight="40.0" prefWidth="716.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Label alignment="CENTER" layoutX="1159.0" layoutY="64.0" prefHeight="59.0" prefWidth="155.0" text="بحث" textFill="#dad3d3">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table_update" layoutX="6.0" layoutY="159.0" prefHeight="602.0" prefWidth="1642.0">
+        <columns>
+            <TableColumn fx:id="Tdate" prefWidth="163.0" style="-fx-alignment: center;" text="تاريخ" />
+            <TableColumn fx:id="Ttype" prefWidth="164.0" style="-fx-alignment: center;" text=" نوع كمية" />
+            <TableColumn fx:id="Tquntity" prefWidth="139.0" style="-fx-alignment: center;" text=" كمية" />
+          <TableColumn fx:id="Tdiscount" prefWidth="115.0" style="-fx-alignment: center;" text="خصم %" />
+            <TableColumn fx:id="Tsaleprice" prefWidth="147.0" style="-fx-alignment: center;" text="سعر بيع" />
+            <TableColumn fx:id="Tpurprice" prefWidth="171.0" style="-fx-alignment: center;" text="سعر شراء" />
+            <TableColumn fx:id="Tbarcode" prefWidth="287.0" style="-fx-alignment: center;" text="باركود" />
+            <TableColumn fx:id="Tname" prefWidth="326.0" style="-fx-alignment: center;" text="الاسم" />
+            <TableColumn fx:id="Tnum" minWidth="5.0" prefWidth="135.0" style="-fx-alignment: center;" text="رقم صنف" />
+        </columns>
+      </TableView>
+      <Button id="blue" layoutX="1431.0" layoutY="778.0" mnemonicParsing="false" onAction="#ondelete" prefHeight="72.0" prefWidth="201.0" stylesheets="@stylesheet.css" text="حذف" />
+      <Button id="blue" layoutX="33.0" layoutY="778.0" mnemonicParsing="false" onAction="#onEdit" prefHeight="72.0" prefWidth="201.0" stylesheets="@stylesheet.css" text="تعديل" />
+   </children>
+</AnchorPane>

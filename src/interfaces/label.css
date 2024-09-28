@@ -1,0 +1,36 @@
+
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+#blue {
+    -fx-background-color:
+            #000000,
+            linear-gradient(#800000 #760911),
+            linear-gradient(#66182D, #996573),
+            linear-gradient(#395cab, #223768);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+#blue Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.8) , 0, 0.0 , 0 , 1);
+}
+#blue:hover {
+    -fx-background-color:
+            #000000,
+            linear-gradient(#800000 #760911),
+            linear-gradient(#66182D, #996573),
+            linear-gradient(#395cab, #223768);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight:bold;
+}
+
+/*----------------------------------------------------------------------------------------------------------------*/
+

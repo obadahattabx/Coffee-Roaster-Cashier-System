@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlers.Edit_Details">
+   <children>
+      <VBox layoutX="574.0" layoutY="4.0" prefHeight="325.0" prefWidth="100.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="95.0" text="باركود" />
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="95.0" text="اسم صنف" />
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="95.0" text="سعر البيع" />
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="95.0" text="كمية" />
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="95.0" text="نوع كمية" />
+         </children>
+      </VBox>
+      <TextField fx:id="name" alignment="CENTER" layoutX="346.0" layoutY="80.0" />
+      <TextField fx:id="saleprice" alignment="CENTER" layoutX="346.0" layoutY="137.0" />
+      <TextField fx:id="qunt" alignment="CENTER" layoutX="346.0" layoutY="203.0" />
+      <TextField fx:id="type" alignment="CENTER" layoutX="346.0" layoutY="263.0" />
+      <TextField fx:id="sale" alignment="CENTER" disable="true" layoutX="22.0" layoutY="35.0" />
+      <TextField fx:id="finalsale" alignment="CENTER" disable="true" layoutX="22.0" layoutY="150.0" />
+      <Label alignment="CENTER" layoutX="223.0" layoutY="75.0" prefHeight="60.0" prefWidth="95.0" text="خصم%" />
+      <TextField fx:id="discount" alignment="CENTER" layoutX="22.0" layoutY="90.0" />
+      <Label alignment="CENTER" layoutX="222.0" layoutY="137.0" prefHeight="60.0" prefWidth="95.0" text="الاجمالي" />
+      <Button fx:id="save" layoutX="270.0" layoutY="368.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="128.0" text="حفظ" />
+      <Label alignment="CENTER" layoutX="222.0" layoutY="20.0" prefHeight="60.0" prefWidth="95.0" text="المبلغ" />
+      <TextField fx:id="barcode" alignment="CENTER" layoutX="346.0" layoutY="20.0" />
+      <RadioButton fx:id="KGrum" layoutX="480.0" layoutY="298.0" mnemonicParsing="false" text="كغم">
+         <toggleGroup>
+            <ToggleGroup fx:id="types" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="Grum" layoutX="413.0" layoutY="298.0" mnemonicParsing="false" text="غرام" toggleGroup="$types" />
+      <RadioButton fx:id="items" layoutX="346.0" layoutY="298.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="62.0" text="حبة" toggleGroup="$types" />
+   </children>
+</AnchorPane>

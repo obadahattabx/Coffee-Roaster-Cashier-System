@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="766.0" style="-fx-background-color: #23272A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlers.Home_category">
+   <children>
+      <Button id="blue" layoutX="581.0" layoutY="322.0" mnemonicParsing="false" onAction="#onNewCategory" prefHeight="54.0" prefWidth="155.0" stylesheets="@stylesheet.css" text="جديد">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+      <Button id="blue" fx:id="baddcategory" disable="true" layoutX="581.0" layoutY="383.0" mnemonicParsing="false" onAction="#addcategory" prefHeight="56.0" prefWidth="155.0" stylesheets="@stylesheet.css" text="اضافة" />
+      <Button id="blue" fx:id="onEditCategory" layoutX="404.0" layoutY="384.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="155.0" stylesheets="@stylesheet.css" text="تعديل" />
+      <TableView fx:id="tablecat" layoutX="10.0" layoutY="60.0" prefHeight="242.0" prefWidth="745.0">
+        <columns>
+          <TableColumn fx:id="culmname" prefWidth="694.0" style="-fx-alignment: center;" text="الاسم" />
+          <TableColumn fx:id="culmnum" minWidth="0.0" prefWidth="48.0" style="-fx-alignment: center;" text="رقم" />
+        </columns>
+      </TableView>
+      <TextField fx:id="text_category" alignment="CENTER_RIGHT" disable="true" layoutX="57.0" layoutY="330.0" prefHeight="39.0" prefWidth="515.0" />
+      <Button id="blue" layoutX="69.0" layoutY="384.0" mnemonicParsing="false" onAction="#onselect" prefHeight="54.0" prefWidth="155.0" stylesheets="@stylesheet.css" text="اختيار" />
+      <Button id="blue" fx:id="bonSaveCategory" disable="true" layoutX="237.0" layoutY="384.0" mnemonicParsing="false" onAction="#onSaveCategory" prefHeight="54.0" prefWidth="155.0" stylesheets="@stylesheet.css" text="حفظ" />
+      <Label alignment="CENTER" layoutX="11.0" layoutY="4.0" prefHeight="56.0" prefWidth="745.0" style="-fx-background-color: #822E46;" text="قائمة انواع الاصناف" textFill="#f5f3f3">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

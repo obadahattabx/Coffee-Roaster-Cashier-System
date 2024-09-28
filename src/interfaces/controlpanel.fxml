@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderpan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1870.0" style="-fx-background-color: #0C0C0C;" styleClass="home" stylesheets="@panelstyler.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlers.Home">
+   <top>
+      <HBox prefHeight="80.0" prefWidth="1874.0" style="-fx-background-color: #252525;" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="line" cancelButton="true" contentDisplay="GRAPHIC_ONLY" ellipsisString="" mnemonicParsing="false" onAction="#onExit" prefHeight="78.0" prefWidth="65.0" stylesheets="@stylesheet.css">
+               <graphic>
+                  <ImageView fitHeight="56.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/signs.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="79.0" prefWidth="1677.0" style="-fx-font: cursive; -fx-background-color: #252525;" text="ALMOKHTAR                " textFill="#eee4e4">
+               <font>
+                  <Font name="Pristina" size="48.0" />
+               </font></Label>
+         </children> 
+      </HBox>
+   </top>
+   <right>
+      <VBox prefHeight="921.0" prefWidth="258.0" style="-fx-background-color: #0C0C0C;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#adds" prefHeight="88.0" prefWidth="300.0" style="-fx-background-color: #800000;" text="المخزن" textAlignment="RIGHT" textFill="#f5eded">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
+            <VBox fx:id="addproducts" prefHeight="151.0" prefWidth="258.0">
+               <children>
+                  <Button id="blue" mnemonicParsing="false" onAction="#addproduct" prefHeight="73.0" prefWidth="258.0" stylesheets="@stylesheet.css" text="اضافة" />
+                  <Button id="blue" mnemonicParsing="false" onAction="#deleteorupdate" prefHeight="75.0" prefWidth="258.0" stylesheets="@stylesheet.css" text="حذف و تعديل" />
+               </children>
+            </VBox>
+            <VBox fx:id="listunder" prefHeight="682.0" prefWidth="258.0">
+               <children>
+                  <Label prefHeight="4.0" prefWidth="260.0" />
+                  <Button mnemonicParsing="false" onAction="#onsaleprice" prefHeight="88.0" prefWidth="300.0" style="-fx-background-color: #800000;" text="فاتورة بيع" textFill="#f8f7f7">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Label prefHeight="4.0" prefWidth="260.0" />
+                  <Button mnemonicParsing="false" onAction="#billpurprice" prefHeight="88.0" prefWidth="300.0" style="-fx-background-color: #800000;" text="فاتورة شراء" textFill="#ebe7e7">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Label prefHeight="4.0" prefWidth="260.0" />
+                  <Button mnemonicParsing="false" onAction="#onBills" prefHeight="88.0" prefWidth="300.0" style="-fx-background-color: #800000;" text="فواتير" textFill="#e8e4e4">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <VBox fx:id="vbBills" prefHeight="113.0" prefWidth="258.0">
+                     <children>
+                        <Button id="blue" mnemonicParsing="false" onAction="#BillsSaleprice" prefHeight="66.0" prefWidth="258.0" stylesheets="@stylesheet.css" text="فواتير البيع" />
+                        <Button id="blue" mnemonicParsing="false" onAction="#BillsPure" prefHeight="62.0" prefWidth="258.0" stylesheets="@stylesheet.css" text="فواتير الشراء" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="underBills" prefHeight="234.0" prefWidth="258.0">
+                     <children>
+                        <Label prefHeight="6.0" prefWidth="258.0" />
+                        <Button mnemonicParsing="false" prefHeight="88.0" prefWidth="300.0" style="-fx-background-color: #800000;" text="اضافة موردين" textFill="#e8e4e4">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Label prefHeight="4.0" prefWidth="260.0" />
+                        <Button mnemonicParsing="false" onAction="#addUsers" prefHeight="88.0" prefWidth="300.0" style="-fx-background-color: #800000;" text="اضافة مستخدمين " textFill="#f2eaea">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Label prefHeight="4.0" prefWidth="260.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <ImageView cacheHint="QUALITY" depthTest="ENABLE" fitHeight="918.0" fitWidth="1612.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../Untitled.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="SE_RESIZE" />
+         </cursor>
+      </ImageView>
+   </center>
+</BorderPane>

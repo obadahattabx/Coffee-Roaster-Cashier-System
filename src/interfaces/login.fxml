@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="parent" prefHeight="700.0" prefWidth="1200.0" styleClass="parent" stylesheets="@loginstyler.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlers.controller_login">
+   <children>
+      <Button id="blue" layoutX="383.0" layoutY="546.0" mnemonicParsing="false" onAction="#onlogin" prefHeight="94.0" prefWidth="467.0" styleClass="login_in" stylesheets="@stylesheet.css" text="تسجيل دخول" textFill="#f5f4f4">
+         <font>
+            <Font name="Microsoft JhengHei UI Light" size="35.0" />
+         </font>
+      </Button>
+      <HBox layoutY="6.0" prefHeight="47.0" prefWidth="1050.0" />
+      <HBox fx:id="Husername" layoutX="354.0" layoutY="359.0" prefHeight="55.0" prefWidth="492.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="62.0" prefWidth="90.0">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/user.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <TextField fx:id="username" alignment="CENTER" prefHeight="55.0" prefWidth="426.0" promptText="اسم المستخدم" styleClass="username">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="354.0" layoutY="427.0" prefHeight="55.0" prefWidth="492.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="62.0" prefWidth="90.0">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/lock.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Label>
+            <PasswordField fx:id="password" alignment="CENTER" prefHeight="55.0" prefWidth="426.0" promptText="كلمة المرور" styleClass="password" />
+         </children>
+      </HBox>
+      <ImageView fitHeight="344.0" fitWidth="377.0" layoutX="444.0" layoutY="14.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/iamgeAL.jpg" />
+         </image>
+      </ImageView>
+      <Button contentDisplay="GRAPHIC_ONLY" layoutX="1153.0" layoutY="6.0" mnemonicParsing="false" onAction="#onCloseStage" prefHeight="27.0" prefWidth="27.0" style="-fx-background-color: #23272A;">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/interface.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button contentDisplay="GRAPHIC_ONLY" layoutX="1106.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#onMini" prefHeight="37.0" prefWidth="39.0" style="-fx-background-color: #23272A;">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/minus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

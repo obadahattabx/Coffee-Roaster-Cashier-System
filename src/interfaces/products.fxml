@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="918.0" prefWidth="1657.0" style="-fx-background-color: #23272A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlers.Home_product">
+   <children>
+      <Button id="sale" layoutX="1144.0" layoutY="20.0" mnemonicParsing="false" onAction="#addcategory" prefHeight="115.0" prefWidth="318.0" stylesheets="@stylesheet.css" text="اختيار نوع صنف او اضافة" />
+      <Label layoutX="10.0" layoutY="10.0" prefHeight="75.0" prefWidth="2.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="496.0" layoutY="325.0" prefHeight="72.0" prefWidth="293.0" style="-fx-background-color: #777C81;" text="خصم %">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="text_discount" alignment="CENTER" disable="true" layoutX="197.0" layoutY="325.0" prefHeight="72.0" prefWidth="293.0">
+         <font>
+            <Font size="20.0" />
+         </font></TextField>
+      <Button id="blue" layoutX="295.0" layoutY="519.0" mnemonicParsing="false" onAction="#addproductsintosql" prefHeight="72.0" prefWidth="357.0" stylesheets="@stylesheet.css" text="اضافة" />
+      <TextField fx:id="text_qunt" alignment="CENTER" disable="true" layoutX="197.0" layoutY="232.0" prefHeight="72.0" prefWidth="293.0">
+         <font>
+            <Font size="20.0" />
+         </font></TextField>
+      <MenuButton fx:id="type_amount" alignment="CENTER" layoutX="496.0" layoutY="232.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="293.0" style="-fx-background-color: #777C81;" text="نوع كمية">
+        <items>
+          <MenuItem fx:id="weight_type" mnemonicParsing="false" onAction="#Weight" text="الوزن" />
+          <MenuItem fx:id="item_type" mnemonicParsing="false" onAction="#item" text="حبة" />
+        </items>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </MenuButton>
+      <Label fx:id="lab_choice" alignment="CENTER" layoutX="1169.0" layoutY="135.0" prefHeight="54.0" prefWidth="240.0" text="لم تختار شيء" textFill="#ebe3e3">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="kgQunt" layoutX="295.0" layoutY="238.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="121.0" selected="true" text="كغم" textFill="#ebe4e4" visible="false">
+         <toggleGroup>
+            <ToggleGroup fx:id="quntity" />
+         </toggleGroup>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="Gqunt" layoutX="295.0" layoutY="274.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="121.0" text="غرام" textFill="#ebe8e8" toggleGroup="$quntity" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <VBox layoutX="1129.0" layoutY="232.0" prefHeight="759.0" prefWidth="293.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="74.0" prefWidth="297.0" style="-fx-background-color: #777C81;" text="رقم صنف" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="199.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="74.0" prefWidth="298.0" style="-fx-background-color: #777C81;" text="باركود" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="199.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="74.0" prefWidth="298.0" style="-fx-background-color: #777C81;" text="اسم صنف" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="2.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="74.0" prefWidth="309.0" style="-fx-background-color: #777C81;" text="سعر شراء" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="2.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="74.0" prefWidth="307.0" style="-fx-background-color: #777C81;" text="سعر بيع" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="2.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="78.0" prefWidth="308.0" style="-fx-background-color: #777C81;" text="تاريخ">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="829.0" layoutY="232.0" prefHeight="759.0" prefWidth="293.0">
+         <children>
+            <TextField fx:id="text_pid" alignment="CENTER" disable="true" prefHeight="76.0" prefWidth="240.0">
+               <font>
+                  <Font size="20.0" />
+               </font></TextField>
+            <Label prefHeight="29.0" prefWidth="239.0" />
+            <TextField fx:id="text_barcode" alignment="CENTER" disable="true" prefHeight="74.0" prefWidth="240.0">
+               <font>
+                  <Font size="20.0" />
+               </font></TextField>
+            <Label prefHeight="30.0" prefWidth="248.0" />
+            <TextField fx:id="text_name" alignment="CENTER" disable="true" prefHeight="72.0" prefWidth="240.0">
+               <font>
+                  <Font size="20.0" />
+               </font></TextField>
+            <Label prefHeight="30.0" prefWidth="245.0" />
+            <TextField fx:id="text_purprice" alignment="CENTER" disable="true" prefHeight="75.0" prefWidth="240.0">
+               <font>
+                  <Font size="20.0" />
+               </font></TextField>
+            <Label prefHeight="32.0" prefWidth="240.0" />
+            <TextField fx:id="text_saleprice" alignment="CENTER" disable="true" prefHeight="74.0" prefWidth="240.0">
+               <font>
+                  <Font size="20.0" />
+               </font></TextField>
+            <Label prefHeight="32.0" prefWidth="240.0" />
+            <TextField fx:id="text_date" alignment="CENTER" disable="true" prefHeight="78.0" prefWidth="240.0">
+               <font>
+                  <Font size="20.0" />
+               </font></TextField>
+         </children>
+      </VBox>
+      <Button id="sale" layoutX="331.0" layoutY="20.0" mnemonicParsing="false" onAction="#onlistpurprice" prefHeight="115.0" prefWidth="318.0" stylesheets="@stylesheet.css" text="قائمة مشتريات غير مضاف" />
+      <RadioButton fx:id="pidselected" layoutX="1356.0" layoutY="204.0" mnemonicParsing="false" onAction="#onpidselected" text="تلقائي" textFill="#f2ebeb" />
+   </children>
+</AnchorPane>

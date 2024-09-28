@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlers.Home_update_Edit">
+   <children>
+      <VBox layoutX="574.0" layoutY="4.0" prefHeight="325.0" prefWidth="100.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="95.0" text="رقم صنف" />
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="95.0" text="اسم صنف" />
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="95.0" text="باركود" />
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="95.0" text="سعر شراء" />
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="95.0" text="سعر بيع" />
+         </children>
+      </VBox>
+      <TextField fx:id="Ename" alignment="CENTER" layoutX="346.0" layoutY="80.0" />
+      <TextField fx:id="Ebarcode" alignment="CENTER" layoutX="346.0" layoutY="137.0" />
+      <TextField fx:id="Epurprice" alignment="CENTER" layoutX="346.0" layoutY="203.0" />
+      <TextField fx:id="EsalePrice" alignment="CENTER" layoutX="346.0" layoutY="263.0" />
+      <TextField fx:id="Ediscount" alignment="CENTER" layoutX="22.0" layoutY="35.0" />
+      <TextField fx:id="Equnt" alignment="CENTER" layoutX="22.0" layoutY="150.0" />
+      <Label alignment="CENTER" layoutX="223.0" layoutY="75.0" prefHeight="60.0" prefWidth="95.0" text="نوع كمية" />
+      <TextField fx:id="Etype" alignment="CENTER" layoutX="22.0" layoutY="90.0" />
+      <Label alignment="CENTER" layoutX="222.0" layoutY="137.0" prefHeight="60.0" prefWidth="95.0" text="كمية" />
+      <Button fx:id="save" layoutX="270.0" layoutY="368.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="128.0" text="حفظ" />
+      <Label alignment="CENTER" layoutX="222.0" layoutY="20.0" prefHeight="60.0" prefWidth="95.0" text="خصم %" />
+      <TextField fx:id="pid" alignment="CENTER" layoutX="346.0" layoutY="20.0" />
+   </children>
+</AnchorPane>
