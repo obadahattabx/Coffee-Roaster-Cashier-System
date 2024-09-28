@@ -45,6 +45,8 @@ The worker interface has limited functionality, where workers can:
 - **MySQL**: For managing data storage, ensuring persistence of products, sales, purchases, and user data.
 - **JDBC (Java Database Connectivity)**: Used to interact with the MySQL database, executing queries and retrieving data.
 - **javafx**: Java’s GUI  used to design the user interfaces for both manager and worker portals.
+## Database ER_Diagram
+![database](https://github.com/user-attachments/assets/78d6e0d9-0906-44c6-8fb2-c19c8e3878a7)
 
 ![Capture](https://github.com/user-attachments/assets/3af93e20-385d-4794-9c1e-eea6e511c5cc)
 ![Capture1](https://github.com/user-attachments/assets/f4e22590-59ad-4e4e-b6c2-f804396985be)
